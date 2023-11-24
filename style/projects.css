@@ -1,0 +1,164 @@
+.projects-container {
+    margin: 0px;
+    margin-top: 67px;
+}
+
+.project {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+
+    fill: rgba(0, 0, 0, 0.10);
+    filter: drop-shadow(0px 0px 10px #000);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.projects-h1 {
+    display: grid;
+    justify-content: center;
+    margin: 0;
+    margin-top: 37px;
+    margin-bottom: 50px;
+    font-size: 48px;
+}
+
+.projects-inner-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    row-gap: 40px;
+}
+
+.column-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+}
+
+.asocion-website,
+.aim-zen {
+    width: 512px;
+    height: 400px;
+
+    fill: rgba(0, 0, 0, 0.10);
+    filter: drop-shadow(0px 0px 10px #000);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.kap-gel-container,
+.messentials-container,
+.column-container {
+    height: 840px;
+    width: 512px;
+}
+
+.kap-gel-container,
+.messentials-container {
+    width: 512px;
+    height: 840px;
+
+    fill: rgba(0, 0, 0, 0.10);
+    filter: drop-shadow(0px 0px 10px #000);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.messentials-container {
+    margin-left: 84px;
+    margin-right: 84px;
+}
+
+.kap-gel-header {
+    width: 512px;
+    height: 100px;
+
+    border-radius: 20px 20px 20px 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.35);
+    background: rgba(35, 35, 35, 0.20);
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+}
+
+.kap-gel-text {
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 48px;
+}
+
+.messentials-header {
+    width: 512px;
+    height: 100px;
+
+    border-radius: 20px 20px 20px 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.35);
+    background: rgba(35, 35, 35, 0.10);
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+}
+
+.messentials-text {
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 48px;
+}
+
+.asocion-website-header,
+.aim-zen-header {
+    width: 512px;
+    height: 100px;
+
+    border-radius: 20px 20px 20px 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.35);
+    background: rgba(35, 35, 35, 0.10);
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+}
+
+.asocion-website-text,
+.aim-zen-text {
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 48px;
+}
+
+.messentials-footer,
+.kap-gel-footer {
+    width: 512px;
+    height: 200px;
+    border-radius: 20px 20px 20px 20px;
+    border-top: 3px solid rgba(255, 255, 255, 0.35);
+    background: rgba(35, 35, 35, 0.10);
+    backdrop-filter: blur(15px);
+
+    margin-top: 540px;
+
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
+
+.messentials-footer-text,
+.kap-gel-footer-text {
+    display: inline-block;
+    font-size: 24px;
+}

@@ -1,0 +1,194 @@
+.nav-header {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    min-height: 136px;
+    flex-shrink: 0;
+
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(35, 35, 35, 0.20);
+    box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(15px);
+
+    margin: 0;
+
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 540px 1fr 540px;
+}
+
+.right-section {
+    display: grid;
+    grid-template-columns: 240px 160px;
+    margin-right: 25px;
+    column-gap: 25px;
+    justify-content: right;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.portfolio-button {
+    width: 240px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-style: solid;
+    background: rgba(230, 57, 70, 0.01);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.70), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(15px);
+    font-size: 26px;
+    color: #EEE;
+    font-weight: 600;
+    cursor: pointer;
+    right: 0px;
+    border: 2px solid #ADD2CA;
+}
+
+.portfolio-button:hover {
+    width: 240px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-style: solid;
+    background: rgba(230, 57, 70, 0.01);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.70), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(15px);
+    font-size: 28px;
+    color: #EEE;
+    font-weight: 600;
+    cursor: pointer;
+    right: 0px;
+    border: 2px solid #EEEEEE;
+    transition: 0.15s;
+}
+
+.portfolio-button:active {
+    width: 240px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-style: solid;
+    background: rgba(230, 57, 70, 0.01);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.70), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(15px);
+    font-size: 24px;
+    color: #eeeeeea2;
+    font-weight: 600;
+    cursor: pointer;
+    right: 0px;
+    border: 2px solid #eeeeee09;
+    transition: 0.15s;
+}
+
+.contact-button { 
+    width: 160px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-style: solid;
+    background: rgba(230, 57, 70, 0.01);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.70), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    backdrop-filter: blur(15px);
+    font-size: 26px;
+    color: #EEE;
+    font-weight: 600;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    border: 2px solid #ADD2CA;
+}
+
+.contact-button:hover {
+    width: 160px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-style: solid;
+    background: rgba(230, 57, 70, 0.01);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.70), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    backdrop-filter: blur(15px);
+    font-size: 28px;
+    color: #EEE;
+    font-weight: 600;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    border: 2px solid #EEEEEE;
+    transition: 0.15s;
+}
+
+.contact-button:active {
+    width: 160px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border-style: solid;
+    background: rgba(230, 57, 70, 0.01);
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.70), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    backdrop-filter: blur(15px);
+    font-size: 24px;
+    color: #eeeeeea2;
+    font-weight: 600;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+    border: 2px solid #eeeeee09;
+    transition: 0.15s;
+}
+
+
+.names {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 40px;
+    align-items: center;
+}
+
+.header-photo {
+    height: 96px;
+    width: 96px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Use percentage for border-radius to make it a circle */
+    
+    margin-top: 25px;
+    margin: 0; /* This line is overwriting the margin-top, remove it */
+    padding: 0;
+    
+    background: url(../images/cemil.png) no-repeat center center; /* Simplify background shorthand */
+    background-size: cover; /* Maintain aspect ratio and cover the entire element */
+    
+    /* Adjust box-shadow properties if needed */
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.50), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
+    display: inline-block;
+}
+
+.header-name {
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.site-name {
+    color: rgba(238, 238, 238, 0.70);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.header-main-text {
+    font-size: 56px;
+    text-align: center;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
+    font-size: clamp();
+}
