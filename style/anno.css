@@ -1,0 +1,16 @@
+.anno {
+    display: grid;
+    place-items: center;
+    height: 100px;
+    width: 960px;
+    border-radius: 20px;
+    margin-top: 50px;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.anno-cont {
+    display: flex;
+    justify-content: center;
+}
+    
