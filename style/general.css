@@ -5,10 +5,10 @@ body {
     color: #EEE;
     margin: 0px;
     /*When overflow is "auto;" there is a problem occurs with sizing WebGL canvas, check F12 for more (Default styling issue)*/
-    overflow: hidden;
+    overflow: auto;
 
     /*background-image: url("../images/background.jpg");*/
-    background-size: cover;
+    /*background-size: cover;*/
     position: relative;
 }
 
