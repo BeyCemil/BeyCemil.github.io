@@ -10,6 +10,11 @@ body {
     background-image: url("../images/background.jpg");
     background-size: cover;
 }
+.general-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 #canvas-container {
     position: absolute;
