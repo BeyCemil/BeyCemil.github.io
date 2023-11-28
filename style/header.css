@@ -16,7 +16,7 @@
     align-items: center;
 
     display: grid;
-    grid-template-columns: 540px 1fr 540px;
+    grid-template-columns: 3fr 2fr 3fr;
 }
 
 .right-section {
@@ -156,16 +156,15 @@
     height: 96px;
     width: 96px;
     flex-shrink: 0;
-    border-radius: 50%; /* Use percentage for border-radius to make it a circle */
+    border-radius: 50%;
     
     margin-top: 25px;
-    margin: 0; /* This line is overwriting the margin-top, remove it */
+    margin: 0;
     padding: 0;
     
-    background: url(../images/cemil.png) no-repeat center center; /* Simplify background shorthand */
-    background-size: cover; /* Maintain aspect ratio and cover the entire element */
+    background: url(../images/cemil.png) no-repeat center center;
+    background-size: cover;
     
-    /* Adjust box-shadow properties if needed */
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.50), 0px 0px 10px 1px rgba(0, 0, 0, 0.50) inset;
     display: inline-block;
 }
@@ -191,4 +190,113 @@
     text-align: center;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
     font-size: clamp();
+}
+
+@media only screen and (max-width: 1080px) {
+    .nav-header {
+        grid-template-columns: 1fr;
+        align-items: start;
+        align-content: space-around;
+        justify-items: center;
+    }
+
+    .right-section {
+        grid-template-columns: 1fr;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .left-section {
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .portfolio-button,
+    .contact-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-photo {
+        display: none;
+        margin-top: 15px;
+    }
+
+    .header-name {
+        margin-top: 10px;
+        font-size: 36px;
+    }
+
+    .site-name {
+        font-size: 24px;
+    }
+
+    .header-main-text {
+        display: none;
+    }
+    
+    .names {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .nav-header {
+        grid-template-columns: 1fr;
+        align-items: start;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .right-section {
+        grid-template-columns: 1fr;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .left-section {
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .portfolio-button,
+    .contact-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-photo {
+        display: none;
+        margin-top: 15px;
+    }
+
+    .header-name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .site-name {
+        font-size: 24px;
+    }
+
+    .header-main-text {
+        display: none;
+    }
+    
+    .names {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }
