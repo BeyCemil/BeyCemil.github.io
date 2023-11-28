@@ -4,8 +4,9 @@ body {
     font-style: normal;
     color: #EEE;
     margin: 0px;
-    overflow: auto;
+    /*When overflow is "auto;" there is a problem occurs with sizing WebGL canvas, check F12 for more (Default styling issue)*/
+    overflow: hidden;
 
-    background-image: url("../images/background.jpg");
+    /*background-image: url("../images/background.jpg");*/
     background-size: cover;
 }
