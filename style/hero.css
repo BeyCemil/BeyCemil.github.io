@@ -26,23 +26,24 @@
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.35);
     padding: 10px;
+
 }
 
 .hero-1-h1 {
     margin: 0;
-    font-size: var(--heading-1);
+    font-size: 48px;
 }
 
 .hero-1-h2 {
     margin: 0;
     margin-top: 30px;
-    font-size: var(--heading-2);
+    font-size: 24px;
 }
 
 .hero-1-h3 {
     margin: 0;
     margin-top: 20px;
-    font-size: var(--heading-3);
+    font-size: 24px;
 }
 
 .three-box-container {
@@ -52,6 +53,7 @@
     margin-top: 46px;
     row-gap: 10px;
     margin-bottom: 10px;
+    
 }
 
 .hero-box-1,
@@ -87,135 +89,4 @@
     align-items: center;
     justify-items: center;
     background-color: rgba(0, 0, 0, 0.10);
-}
-
-.aim-zen-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    padding: 20px;
-}
-
-.aim-zen-container {
-    max-width: 960px;
-    width: 100%;
-    background: rgba(35, 35, 35, 0.20);
-    border-radius: 20px;
-    padding: 30px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.70);
-    margin-bottom: 40px;
-}
-
-.aim-zen-title {
-    font-size: var(--heading-2);
-    text-align: center;
-    margin-bottom: 30px;
-    color: #EEE;
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
-}
-
-.steam-widget {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-    width: 100%;
-}
-
-.steam-widget iframe {
-    max-width: 100%;
-    height: 190px;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.feature-card {
-    background: rgba(0, 0, 0, 0.20);
-    border-radius: 15px;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    transition: transform 0.2s ease-in-out;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-title {
-    font-size: var(--heading-3);
-    color: #ADD2CA;
-    margin-bottom: 10px;
-}
-
-.feature-description {
-    font-size: var(--body-text);
-    color: #EEE;
-    line-height: 1.5;
-}
-
-@media only screen and (max-width: 1024px) {
-    .hero-1-container {
-        width: 90%;
-    }
-
-    .aim-zen-container {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .steam-widget iframe {
-        width: 100%;
-        max-width: 646px;
-    }
-
-    .hero-box-1,
-    .hero-box-2,
-    .hero-box-3 {
-        width: 90%;
-        margin: 10px 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .hero-1-h1 {
-        font-size: var(--heading-1);
-    }
-
-    .hero-1-h2 {
-        font-size: var(--heading-2);
-    }
-
-    .hero-1-h3 {
-        font-size: var(--heading-3);
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .three-box-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.aim-zen-description {
-    margin: 30px 0;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.description-text {
-    font-size: var(--body-text);
-    line-height: 1.6;
-    color: #EEE;
-    max-width: 800px;
-    margin: 0 auto;
 }
