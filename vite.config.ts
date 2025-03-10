@@ -4,9 +4,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/BeyCemil.github.io/", // Add this line for GitHub Pages compatibility
+  base: "/colorful-portfolio-shade/", // GitHub repo adı ile güncellendi
   server: {
     host: "::",
     port: 8080,
