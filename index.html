@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cemil Buğra Uzunkaya</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/build/three.min.js"></script>
+
+    <!-- vertexShader -->
+    <script id="js-vertex-shader" type="x-shader/x-vertex">
+        attribute vec3 position;
+        
+        void main()	{
+          gl_Position = vec4(position, 1.0);
+        }
+        </script>
+
+    <!-- fragmentShader -->
+    <script id="js-fragment-shader" type="x-shader/x-fragment">
+        precision highp float;
+        uniform vec2 resolution;
+        uniform float time;
+        uniform float xScale;
+        uniform float yScale;
+        uniform float distortion;
+        
+        void main() {
+          vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+          
+          float d = length(p) * distortion;
+          
+          float rx = p.x * (1.0 + d);
+          float gx = p.x;
+          float bx = p.x * (1.0 - d);
+        
+          float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
+          float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
+          float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+          
+          gl_FragColor = vec4(r, g, b, 1.0);
+        }
+        </script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/anno.css">
+</head>
+
+<body>
+
+    <div class="general-container">
+        <!--WebGLContainer & Script Initialization Starts-->
+        <canvas id="webgl-canvas"></canvas>
+        <!--WebGLContainer & Script Initialization End-->
+        <!--Header starts-->
+        <header>
+            <nav class="nav-header">
+                <div class="left-section">
+                    <div>
+                        <div class="header-photo"></div>
+                    </div>
+                    <div class="names">
+                        <div class="header-name">Cemil Buğra Uzunkaya</div>
+                        <div class="site-name">beycemil.github.io</div>
+                    </div>
+                </div>
+
+                <div class="middle-section">
+                    <div class="header-main-text">Full-Stack Designer</div>
+                </div>
+
+                <div class="right-section">
+                    <button id="portfolio-button-js" class="portfolio-button">Portfolio/Cv</button>
+                    <button id="contact-button-js" class="contact-button">Contact</button>
+                </div>
+            </nav>
+        </header>
+        <!--Header ends-->
+
+        <!--Hero starts-->
+        <div class="hero-cont">
+            <div class="hero-1-container">
+                <div class="hero-1-box">
+                    <div class="hero-1">
+                        <h1 class="hero-1-h1">FROM THE BOTTOM TO THE TOP</h1>
+                        <h2 class="hero-1-h2">I’m a graphic designer, 3D Artist, UI/UX Designer,<br>
+                            Front-End & Game Developer based in Turkey.</h2>
+                        <h3 class="hero-1-h3"> I have plenty of experience with project-related web development and game
+                            design
+                            with the following tools: </h3>
+                    </div>
+                    <div class="three-box-container">
+                        <div class="hero-box-1">
+                            <img src="images/adobe.png">
+                            <img src="images/figma.png">
+                            <img src="images/blender.png">
+                        </div>
+                        <div class="hero-box-2">
+                            <img src="images/unity.png">
+                            <img src="images/ue.png">
+                        </div>
+                        <div class="hero-box-3">
+                            <img src="images/js.png">
+                            <img src="images/css.png">
+                            <img src="images/html.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--Hero ends-->
+
+        <section class="aim-zen-section">
+            <div class="aim-zen-container">
+                <h2 class="aim-zen-title">Aim Zen: Your Ultimate FPS Aim Trainer</h2>
+
+                <div class="steam-widget">
+                    <iframe src="https://store.steampowered.com/widget/2791290/" frameborder="0" width="646"
+                        height="190">
+                    </iframe>
+                </div>
+
+                <div class="aim-zen-description">
+                    <p class="description-text">Welcome to Aim Zen, the revolutionary FPS aim trainer designed to
+                        elevate your shooting skills to the next level! Whether you're a seasoned gamer or just
+                        starting, Aim Zen offers a unique blend of traditional and innovative training methods to
+                        sharpen your aiming precision.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Revolutionary Musical Target System</h3>
+                        <p class="feature-description">Experience our innovative system where targets sync perfectly
+                            with rhythm and beats. Improve your aim while enjoying a mesmerizing visual and auditory
+                            experience that makes training feel less like practice and more like play.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3 class="feature-title">Classic Training Excellence</h3>
+                        <p class="feature-description">Master your skills with our distraction-free classic exercises.
+                            Take full control of your training experience, whether you prefer music-integrated modes or
+                            traditional targeting practice. Clean interface ensures maximum focus on what matters most -
+                            your improvement.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3 class="feature-title">Enhanced Features</h3>
+                        <p class="feature-description">Create your own training worlds with our custom editor, compete
+                            on global leaderboards, and enjoy high FPS performance without sacrificing visual quality. A
+                            perfect balance of functionality and aesthetics for serious aim training.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Announcement-->
+        <div class="anno-cont">
+            <div class="anno">I'm currently refining my C# and Unity Library skills. I will
+                update the site when i
+                have enough coding projects. Check my CV from Portfolio/Cv button to see Art Portfolio.</div>
+        </div>
+    </div>
+    <script src="script/buttons.js"></script>
+    <script src="script/shader.js"></script>
+</body>
+
+</html>
