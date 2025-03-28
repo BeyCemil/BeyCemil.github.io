@@ -1,8 +1,10 @@
 
 import { useEffect, useRef } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const BinaryRain = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -15,7 +17,8 @@ const BinaryRain = () => {
     canvas.height = window.innerHeight;
 
     const binary = ['0', '1'];
-    const fontSize = 14;
+    // Increase font size significantly - double or more
+    const fontSize = isMobile ? 20 : 28;
     const columns = canvas.width / fontSize;
     
     const drops: number[] = [];
@@ -27,7 +30,7 @@ const BinaryRain = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = 'rgba(168, 85, 247, 0.15)';
+      ctx.fillStyle = 'rgba(0, 225, 255, 0.15)';
       ctx.font = `${fontSize}px JetBrains Mono`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -55,7 +58,7 @@ const BinaryRain = () => {
       clearInterval(interval);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <canvas 

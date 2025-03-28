@@ -2,9 +2,11 @@
 import { useEffect, useRef } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import GlassCard from './ui/GlassCard';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,12 +62,6 @@ const Hero = () => {
           <br />
           EVERY PIXEL TELLS A STORY
         </h2>
-        
-        <GlassCard className="px-6 py-8 max-w-3xl mx-auto relative z-10 bg-black/30">
-          <p className="text-gray-300 text-lg">
-            Full-Stack Indie Game Developer specializing in creating immersive digital experiences. Combining technical expertise with artistic vision to bring virtual worlds to life.
-          </p>
-        </GlassCard>
         
         <div className="flex justify-center space-x-6 mt-10 relative z-10">
           <a 
