@@ -1,12 +1,12 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/beycemil.github.io/',
+  // If your repo is username.github.io, use base: '/'
+  // If your repo is a project repo, use base: '/repo-name/'
+  base: '/', // <-- Change this line to use relative paths
   server: {
     host: "::",
     port: 8080,
