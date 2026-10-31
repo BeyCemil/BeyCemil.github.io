@@ -22,7 +22,7 @@
 <style>
 
 #bg{image-rendering:pixelated;image-rendering:crisp-edges}
-body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 45%,rgba(2,3,10,.65) 100%)}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 45%,rgba(0,0,0,.65) 100%)}
 #tabs .hint{margin-right:18px}
 .px{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;color:var(--dim);align-self:center;padding-right:6px}
 .px input{width:96px;accent-color:#5aa9ff}
@@ -122,20 +122,20 @@ var gl = cv.getContext('webgl', { antialias: false, alpha: false });
 addEventListener('pointermove', function(e){ mx = e.clientX / innerWidth; my = 1 - e.clientY / innerHeight; });
 // six colour stops per palette, dark to light
 var PAL = {
-  ocean:     [[.016,.02,.06],[.05,.07,.22],[.1,.2,.52],[.08,.5,.72],[.3,.82,.8],[.82,.98,.86]],
+  mono:      [[.016,.016,.016],[.07,.07,.07],[.19,.19,.19],[.4,.4,.4],[.72,.72,.72],[.95,.95,.95]],
   aimzen:    [[.01,.02,.08],[.04,.08,.3],[.1,.25,.8],[.2,.6,1],[.6,.9,1],[.95,1,1]],
   tidehaven: [[.05,.03,.02],[.2,.1,.05],[.5,.28,.1],[.85,.55,.2],[.98,.8,.4],[1,.95,.75]],
   ikag:      [[.08,.02,.03],[.35,.06,.1],[.8,.2,.12],[1,.5,.1],[1,.82,.25],[.75,.95,.85]],
   subjects:  [[.01,.01,.015],[.1,.02,.04],[.3,.05,.08],[.55,.08,.12],[.8,.3,.3],[.95,.75,.7]]
 };
-var cur = PAL.ocean.map(function(c){ return c.slice(); }), tgt = PAL.ocean;
-function setPal(k){ tgt = PAL[k] || PAL.ocean; }
+var cur = PAL.mono.map(function(c){ return c.slice(); }), tgt = PAL.mono;
+function setPal(k){ tgt = PAL[k] || PAL.mono; }
 document.querySelectorAll('.grow').forEach(function(r){
   var id = r.dataset.game;
   r.addEventListener('mouseenter', function(){ setPal(id); }); r.addEventListener('focus', function(){ setPal(id); });
-  r.addEventListener('mouseleave', function(){ setPal('ocean'); }); r.addEventListener('blur', function(){ setPal('ocean'); });
+  r.addEventListener('mouseleave', function(){ setPal('mono'); }); r.addEventListener('blur', function(){ setPal('mono'); });
 });
-if (!gl) { cv.style.background = 'linear-gradient(135deg,#050818,#1a1f5c 55%,#1c7a8c)'; }
+if (!gl) { cv.style.background = 'linear-gradient(135deg,#050505,#2a2a2a 55%,#8a8a8a)'; }
 else {
   var VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   var FS = 'precision highp float;uniform vec2 res;uniform float time;uniform vec2 mouse;uniform vec3 pal[6];uniform sampler2D trail;' +
